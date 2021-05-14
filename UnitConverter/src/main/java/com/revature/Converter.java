@@ -51,14 +51,14 @@ public class Converter {
 	}
     public static void galToLiter(double gals) {
     	 double result= gals*3.7854;
-    	 System.out.println(result);
+    	 System.out.println(gals + "g is "+result+" liters");
     }
     public static void miToKilometers(double miles) {
     	 double result= miles*3.7854;
-   	     System.out.println(result);
+   	     System.out.println(miles+"mi is "+result+" km");
     }
     public static void dollarToBitcoin(double d) {
     	double result = d*0.00020;
-    	System.out.println(result);
+    	System.out.println(d +"dollars is "+result+" bitcoin");
     }
 }
