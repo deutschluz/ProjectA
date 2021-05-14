@@ -10,9 +10,18 @@ public class Converter {
 			menuSelection=receiveMenuInput();
 			switch(menuSelection) {
 			case 1:
-				//gals to liter
-				galToLiter(collectQuantity());
-				break;
+				//volumeConversionsMenu
+				VolumeConversionsMenu();
+				menuSelection=receiveMenuInput();
+				switch(menuSelection) {
+					case 1:
+						//gallons to liters
+						UserPrompt();
+						galToLiter(collectQuantity());
+						break;
+					default:
+						break;
+				}
 			case 2:
 				//miles to kilometer
 				miToKilometers(collectQuantity());
@@ -34,12 +43,46 @@ public class Converter {
 		String mainMenu="\n"
 				+ "Welcome to Angel's Unit Converter\n"
 				+" Here are your options\n"
-				+" 1. Gallons to Liters\n"
-				+" 2. mile to kilometers\n"
-				+" 3. dollars to Bitcoin\n"
+				+" 1. Volume Conversions\n"
+				+" 2. Distance Conversions\n"
+				+" 3. Currency Coversions\n"
 				+" 4. Quit\n"
 				+" Please type any one of the numbers 1 - 4";
 		System.out.println(mainMenu);
+	}
+	public static void UserPrompt() {
+		System.out.println("Please enter amount to be converted: \n");
+	}
+	public static void VolumeConversionsMenu() {
+		String volumeSubMenu="\n"
+				+" Here are your options\n"
+				+" 1. Gallons to Liters\n"
+				+" 2. DistanceConversions\n"
+				+" 3. CurrencyCoversions\n"
+				+" 4. Back to Main Menu\n"
+				+" Please type any one of the numbers 1 - 4";
+		System.out.println(volumeSubMenu);
+	}
+	
+	public static void DistanceConversionsMenu() {
+		String distanceSubMenu="\n"
+				+" Here are your options\n"
+				+" 1. Miles to Kilometers\n"
+				+" 2. DistanceConversions\n"
+				+" 3. CurrencyCoversions\n"
+				+" 4. Back to Main Menu\n"
+				+" Please type any one of the numbers 1 - 4";
+		System.out.println(distanceSubMenu);
+	}
+	public static void CurrencyConversionsMenu() {
+		String currencySubMenu="\n"
+				+" Here are your options\n"
+				+" 1. Miles to Kilometers\n"
+				+" 2. DistanceConversions\n"
+				+" 3. CurrencyCoversions\n"
+				+" 4. Back to Main Menu\n"
+				+" Please type any one of the numbers 1 - 4";
+		System.out.println(currencySubMenu);
 	}
 	public static int receiveMenuInput() {
 		Scanner input= new Scanner(System.in);
