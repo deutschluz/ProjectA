@@ -109,7 +109,7 @@ public class Converter {
 				+" 1. Gallons to Liters\n"
 				+" 2. Liters to Gallons\n"
 				+" 3. cm^3 to Liters\n"
-				+" 4. Back to Main Menu\n"
+				+" 4. Quit\n"
 				+" Please type any one of the numbers 1 - 4";
 		System.out.println(volumeSubMenu);
 	}
